@@ -7,10 +7,10 @@ intents = discord.Intents.default()
 intents.members = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
-TOKEN = os.getenv("MTQxOTM0MzM2OTA2NjUxMjM5NA.GEfkgt.JRP8xRNwJvbQSvKlai06iBZY_BJwfCaVUCg_Cg")
-GUILD_ID = int(os.getenv("1411940269053579327"))
-ROLE_ID = int(os.getenv("1411942764341493871"))
-GAMEPASS_ID = int(os.getenv("1435753266"))
+TOKEN = os.getenv("BOT_TOKEN")
+GUILD_ID = int(os.getenv("GUILD_ID"))
+ROLE_ID = int(os.getenv("ROLE_ID"))
+GAMEPASS_ID = int(os.getenv("GAMEPASS_ID"))
 
 async def get_user_id(username):
     url = f"https://api.roblox.com/users/get-by-username?username={username}"
@@ -54,3 +54,4 @@ async def link(ctx, roblox_username: str):
         await ctx.send("u don't got the gamepass brodie")
 
 bot.run(TOKEN)
+
