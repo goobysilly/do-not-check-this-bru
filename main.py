@@ -5,6 +5,7 @@ import os
 
 intents = discord.Intents.default()
 intents.members = True
+intents.message_content = True
 bot = commands.Bot(command_prefix='!', intents=intents)
 
 TOKEN = os.getenv("BOT_TOKEN")
@@ -54,4 +55,5 @@ async def link(ctx, roblox_username: str):
         await ctx.send("u don't got the gamepass brodie")
 
 bot.run(TOKEN)
+
 
