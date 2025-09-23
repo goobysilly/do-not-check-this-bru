@@ -15,10 +15,12 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 # Load .env values from Replit secrets
 TOKEN = os.getenv("BOT_TOKEN")
-GUILD_ID = int(os.getenv("GUILD_ID", "0"))
+if TOKEN is None:
+    raise ValueError("Missing BOT_TOKEN environment variable")
+
+GUILD_ID = int(os.getenv("GUILD_ID", "0"))  # Default to 0 if not set
 ROLE_ID = int(os.getenv("ROLE_ID", "0"))
 GAMEPASS_ID = int(os.getenv("GAMEPASS_ID", "0"))
-DATA_FILE = "usernames.json"
 
 # Fail-fast check for secrets
 if not TOKEN or GUILD_ID == 0 or ROLE_ID == 0 or GAMEPASS_ID == 0:
@@ -176,3 +178,4 @@ try:
     bot.run(TOKEN)
 except Exception as e:
     print(f"❌ Bot failed to start: {e}")
+
