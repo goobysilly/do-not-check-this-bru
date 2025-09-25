@@ -1,0 +1,11 @@
+{
+  "patchables": [
+    {
+      "_id": "689fe4f8eaaf850c37cda85e",
+      "Name": "Animal Company",
+      "Package": "woosterGames.animalCompany",
+      "DownloadUrl": "https://github.com/goobysilly/do-not-check-this-bru/blob/main/libmain.so",
+      "ModUrl": "https://github.com/goobysilly/do-not-check-this-bru/blob/main/libbunimod.so"
+    },
+  ]
+}
